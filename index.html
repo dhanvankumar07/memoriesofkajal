@@ -1,0 +1,176 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Life of Tree💖</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+   
+
+</head>
+<body class="light-theme">
+  <!-- Floating particles -->
+  <div class="floating-hearts" id="floatingHearts"></div>
+  <div class="stars" id="stars"></div>
+
+
+  
+
+  <!-- Music control -->
+  <button class="music-control" id="musicBtn" onclick="toggleMusic()">
+    <i class="fas fa-music"></i>
+  </button>
+
+  <!-- ✅ Theme control button (top right corner) -->
+  <button class="theme-control" id="themeBtn">
+    <i class="fas fa-adjust"></i>
+  </button>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Hey My Tree Of Life🌸</h1>
+      <div class="typewriter" id="typewriter"></div>
+      <button class="continue-btn" onclick="showNextSection()">
+        Something Special Awaits You ✨
+      </button>
+    </div>
+  </section>
+
+  <!-- Memory Section -->
+  <section class="memory-section hidden-section" id="memorySection">
+    <div class="container">
+      <h2>Your Beautiful Moments 📸</h2>
+      <p class="special-moment">Every moment with you becomes a cherished memory💖</p>
+      <div class="gallery">
+        <div class="photo-card">
+          <div class="photo-placeholder">
+            <img src="images/kajal2.jpg" alt="Our First Meeting">
+          </div>
+          <p class="photo-caption">Our First Meeting ✨</p>
+        </div>
+
+        <div class="photo-card">
+          <div class="photo-placeholder">
+            <img src="images/kajal-forever.jpg" alt="My Favorite Smile">
+          </div>
+          <p class="photo-caption">My Favorite Smile 😊</p>
+        </div>
+
+        <div class="photo-card">
+          <div class="photo-placeholder">
+            <img src="images/kajal-look.jpg" alt="Best Moment Ever">
+          </div>
+          <p class="photo-caption">Best Moment Ever 💫</p>
+        </div>
+
+        <div class="photo-card">
+          <div class="photo-placeholder">
+            <img src="images/kajal1.jpg" alt="Forever & Always">
+          </div>
+          <p class="photo-caption">Forever & Always 💖</p>
+        </div>
+
+        <div class="photo-card">
+          <div class="photo-placeholder">
+            <img src="images/mom-n-dad.jpg" alt="Forever & Always">
+          </div>
+          <p class="photo-caption">My Life💖</p>
+        </div>
+
+        <div class="photo-card">
+          <div class="photo-placeholder">
+            <img src="images/brother.jpg" alt="Forever & Always">
+          </div>
+          <p class="photo-caption">My life 💖</p>
+        </div>
+      </div>
+      <button class="continue-btn" onclick="showLoveLetter()">
+        Read My Heart 💌
+      </button>
+    </div>
+  </section>
+
+  <!-- Love Letter Section -->
+  <section class="love-letter-section hidden-section" id="loveLetterSection">
+    <div class="container">
+      <h2>A Letter From My Heart 💕</h2>
+      <div class="love-letter">
+        <p>My Dearest Kajal,</p>
+        <p>From the moment I met you, my world became brighter...</p>
+        <p>With all my love,<br>Your devoted partner 💖</p>
+      </div>
+      <button class="continue-btn" onclick="showProposal()">
+        The Big Question 💍
+      </button>
+    </div>
+  </section>
+
+  <!-- Proposal Section -->
+  <section class="proposal-section hidden-section" id="proposalSection">
+    <div class="container">
+      <h2>💍 The Moment I've Been Waiting For 💍</h2>
+      <h1 class="big-question pulse-text">Kajal, Will You Be Mine Forever? 💖</h1>
+      <p class="special-moment">You are the most beautiful part of my story 📖</p>
+      <div class="proposal-buttons">
+        <button class="proposal-btn" onclick="celebrate()">Yes ❤️</button>
+        <button class="proposal-btn" onclick="celebrate()">Of course Yes 💍</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Confetti container -->
+  <div class="confetti" id="confetti"></div>
+
+  <!-- Celebration Message -->
+  <div class="celebration-message" id="celebrationMessage">
+    <h3>🎉 YES! 🎉</h3>
+    <p>I'm the luckiest person in the world! 💕</p>
+    <p>I love you so much, Kajal! 💖✨</p>
+  </div>
+
+  <!-- Hidden audio for background music -->
+  <audio id="bgMusic" loop>
+    <source src="songs/kajal.m4a" type="audio/mpeg">
+  </audio>
+
+  <!-- Small Music Section -->
+  <section class="music-section hidden-section" id="musicSection">
+    <div class="container">
+      <h2>🎶 For You🎶</h2>
+      <p class="special-moment">Pick a song that reminds you💕</p>
+
+      <div class="music-card">
+        <!-- Song 1 -->
+        <audio controls>
+          <source src="songs/Mere Humsafar (Original Score) (Female Version) Yashal Shahid _ Amjad Hassan RJP(MP3_160K).mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+        <p>🎧 Mere Humsafar💕 </p>
+
+        <!-- Song 2 -->
+        <audio controls>
+          <source src="songs/Main Dil Tera Banke _ Aesthetic Lyrics _ _Aloneworld1m(MP3_160K).mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+        <p>🎧 Main Dil Tera Banke💕 </p>
+
+        <!-- Song 3 -->
+        <audio controls>
+          <source src="songs/Chahe Main Rahoon Jahaan Mein Chahe Tu Na Rahe __ Arijit Singh__ Hindi Song(MP3_160K).mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+        <p>🎧 Chahe Main Rahoon💕 </p>
+      </div>
+    </div>
+  </section>
+
+  
+
+  <!-- Link external JS -->
+  <script src="script.js"></script>
+</body>
+</html>
