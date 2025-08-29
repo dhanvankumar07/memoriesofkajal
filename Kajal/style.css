@@ -1,0 +1,1072 @@
+ /* Global Styles*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    overflow-x: hidden;
+    background: linear-gradient(135deg, #ffeef8, #f8e8ff, #fff0f5);
+}
+
+
+
+
+/* ======================
+   🌙 THEME BUTTON STYLING
+====================== */
+.theme-control {
+    position: fixed;
+    bottom: 20px;
+    right: 110px; /* placed beside music button */
+    background: rgba(77, 121, 255, 0.9);
+    border: none;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    z-index: 100;
+    transition: all 0.3s ease;
+    transform: translateZ(0);
+}
+
+.theme-control:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+/* ======================
+   🌸 THEME 1: Light (Original)
+====================== */
+body.light-theme {
+    background: linear-gradient(135deg, #ffeef8, #f8e8ff, #fff0f5);
+    color: #2c2c2c;
+}
+
+body.light-theme h1,
+body.light-theme h2,
+body.light-theme p {
+    color: #2c2c2c;
+}
+
+/* ======================
+   🌙 THEME 2: Dark Yellow
+====================== */
+body.dark-yellow-theme {
+    background: linear-gradient(135deg, #1a1a1a, #2c2c2c);
+    color: #f5d142;
+}
+
+body.dark-yellow-theme h1,
+body.dark-yellow-theme h2,
+body.dark-yellow-theme p {
+    color: #f5d142;
+}
+
+body.dark-yellow-theme .continue-btn,
+body.dark-yellow-theme .proposal-btn {
+    background: #f5d142;
+    color: #1a1a1a;
+}
+
+/* ======================
+   🌅 THEME 3: Sunset Pink
+====================== */
+body.sunset-theme {
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    color: #fff;
+}
+
+body.sunset-theme h1,
+body.sunset-theme h2,
+body.sunset-theme p {
+    color: #fff;
+}
+
+body.sunset-theme .continue-btn,
+body.sunset-theme .proposal-btn {
+    background: #fff;
+    color: #ff4d6d;
+}
+
+/* ======================
+   👑 THEME 4: Royal Purple
+====================== */
+body.royal-theme {
+    background: linear-gradient(135deg, #3a0ca3, #7209b7, #f72585);
+    color: #fff;
+}
+
+body.royal-theme h1,
+body.royal-theme h2,
+body.royal-theme p {
+    color: #fff;
+}
+
+body.royal-theme .continue-btn,
+body.royal-theme .proposal-btn {
+    background: #ffb703;
+    color: #3a0ca3;
+}
+
+/* 🌙 THEME 2: Dark Yellow */
+body.dark-yellow-theme {
+  background: #000 !important; /* full black body */
+  color: #f5d142 !important;   /* yellow text */
+}
+
+/* apply yellow to all text-based elements */
+body.dark-yellow-theme h1,
+body.dark-yellow-theme h2,
+body.dark-yellow-theme h3,
+body.dark-yellow-theme h4,
+body.dark-yellow-theme p,
+body.dark-yellow-theme span,
+body.dark-yellow-theme a,
+body.dark-yellow-theme li {
+  color: #f5d142 !important;
+}
+
+/* keep buttons dark instead of yellow */
+body.dark-yellow-theme .continue-btn,
+body.dark-yellow-theme .proposal-btn {
+  background: #111 !important; /* dark button */
+  color: #f5d142 !important;   /* yellow text on it */
+  border: 1px solid #f5d142;   /* thin yellow border */
+}
+
+/* cards / sections stay dark with yellow text */
+body.dark-yellow-theme .love-letter,
+body.dark-yellow-theme .memory-card,
+body.dark-yellow-theme .music-card {
+  background: #111 !important; 
+  color: #f5d142 !important;
+  border: 1px solid #333;
+}
+
+
+/* 🌙 THEME 2: Dark Yellow */
+body.dark-yellow-theme {
+  background: #000000 !important; /* full black background */
+  color: #f5d142 !important;   /* yellow text */
+}
+
+
+#bgVideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* video fills the screen */
+  z-index: -1;       /* keeps video behind everything */
+}
+
+body.dark-yellow-theme {
+  color: #f5d142 !important;
+  
+}
+
+
+
+/* make all sections black too */
+body.dark-yellow-theme section,
+body.dark-yellow-theme .love-letter,
+body.dark-yellow-theme .memory-card,
+body.dark-yellow-theme .music-card,
+body.dark-yellow-theme .proposal-card {
+  background: #000000 !important; 
+  color: #f5d142 !important;
+  border: 1px solid #222; /* subtle dark border */
+}
+
+/* text inside stays yellow */
+body.dark-yellow-theme h1,
+body.dark-yellow-theme h2,
+body.dark-yellow-theme h3,
+body.dark-yellow-theme h4,
+body.dark-yellow-theme p,
+body.dark-yellow-theme span,
+body.dark-yellow-theme a,
+body.dark-yellow-theme li {
+  color: #f5d142 !important;
+}
+
+/* buttons stay black with yellow text */
+body.dark-yellow-theme .continue-btn,
+body.dark-yellow-theme .proposal-btn {
+  background: #000 !important;
+  color: #f5d142 !important;
+  border: 1px solid #f5d142;
+}
+
+   
+
+
+
+/* Performance optimization */
+.hero-content h1, 
+h2,
+.photo-card,
+.proposal-btn {
+    will-change: transform;
+}
+
+/* Floating particles animation - optimized */
+.floating-hearts {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.heart {
+    position: absolute;
+    color: rgba(255, 182, 193, 0.6);
+    font-size: 20px;
+    animation: float 6s ease-in-out infinite;
+    transform: translateZ(0); /* GPU acceleration */
+}
+
+.rose-petal {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #ff69b4;
+    border-radius: 50% 0;
+    animation: fall 8s linear infinite;
+    opacity: 0.7;
+    transform: translateZ(0); /* GPU acceleration */
+}
+
+@keyframes float {
+    0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { transform: translateY(-20vh) rotate(180deg); opacity: 0; }
+}
+
+@keyframes fall {
+    0% { transform: translateY(-10px) rotate(0deg); opacity: 0; }
+    10% { opacity: 1; }
+    100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fecfef 100%);
+    position: relative;
+    overflow: hidden;
+    animation: heroSlideUp 1.2s cubic-bezier(0.77,0,0.175,1) both;
+}
+
+@keyframes heroSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(60px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 6.5rem;
+    font-weight: 900;
+    color: hsl(311, 99%, 41%);
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    background: linear-gradient(to right, #ffd000, #ff1493);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+ 
+
+.typewriter {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3.5rem;
+    color: #d63384;
+    min-height: 120px;
+    margin: 2rem 0;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.continue-btn {
+    background: linear-gradient(45deg, #ff6b9d, #c44569);
+    color: white;
+    padding: 25px 60px;
+    border: none;
+    border-radius: 50px;
+    font-size: 2.2rem;
+    cursor: pointer;
+    box-shadow: 0 8px 25px rgba(255, 107, 157, 0.3);
+    transition: all 0.3s ease;
+    margin-top: 3rem;
+    font-family: 'Playfair Display', serif;
+    transform: translateZ(0); /* GPU acceleration */
+}
+
+.continue-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(255, 107, 157, 0.4);
+}
+
+/* Sections */
+section {
+    min-height: 100vh;
+    padding: 80px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.memory-section {
+    background: linear-gradient(135deg, #f8f9ff 0%, #fff5f5 100%);
+}
+
+.love-letter-section {
+    background: linear-gradient(135deg, #fff0f5 0%, #fef7f0 100%);
+}
+
+.proposal-section {
+    background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    text-align: center;
+    z-index: 10;
+    position: relative;
+    padding: 0 20px; /* Added side padding */
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 5.5rem;
+    font-weight: 900;
+    color: #8b0347;
+    margin-bottom: 3rem;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+    background: linear-gradient(to right, #8b0045, #ff1493);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Gallery - Fixed spacing */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin: 3rem 0;
+    width: 100%;
+    padding: 0 20px; /* Added side padding */
+}
+
+.photo-card {
+    background: rgba(246, 184, 250, 0.902);
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    transform: translateZ(0); /* GPU acceleration */
+}
+
+.photo-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+}
+
+.photo-placeholder {
+    width: 100%;
+    height: 300spx;
+    background: linear-gradient(45deg, #ffc0cb, #ffb6c1);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 6rem;
+    color: #8b0045;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+}
+
+.photo-placeholder img {
+    width: 250px;
+    height: px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.photo-card:hover .photo-placeholder img {
+    transform: scale(1.1);
+}
+
+.photo-caption {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    color: #8b0045;
+    font-style: italic;
+}
+
+/* Love Letter */
+.love-letter {
+    background: white;
+    padding: 50px;
+    border-radius: 25px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+    max-width: 900px;
+    margin: 3rem auto;
+    border-left: 8px solid #ff69b4;
+}
+
+.love-letter p {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.8rem;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 2rem;
+    opacity: 0;
+    animation: fadeInUp 1s ease forwards;
+}
+
+.love-letter p:nth-child(2) { animation-delay: 0.5s; }
+.love-letter p:nth-child(3) { animation-delay: 1s; }
+.love-letter p:nth-child(4) { animation-delay: 1.5s; }
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Proposal Buttons */
+.proposal-buttons {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    margin-top: 4rem;
+    flex-wrap: wrap;
+}
+
+.proposal-btn {
+    background: linear-gradient(45deg, #ff6b9d, #c44569);
+    color: white;
+    padding: 30px 70px;
+    border: none;
+    border-radius: 50px;
+    font-size: 2.8rem;
+    font-family: 'Playfair Display', serif;
+    cursor: pointer;
+    box-shadow: 0 15px 35px rgba(255, 107, 157, 0.3);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    transform: translateZ(0); /* GPU acceleration */
+}
+
+.proposal-btn:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 20px 45px rgba(255, 107, 157, 0.4);
+}
+
+.proposal-btn:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255,255,255,0.2);
+    border-radius: 50%;
+    transition: all 0.5s ease;
+    transform: translate(-50%, -50%);
+}
+
+.proposal-btn:hover:before {
+    width: 300px;
+    height: 300px;
+}
+
+/* Confetti and Celebration */
+.confetti {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1000;
+}
+
+.confetti-piece {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #ff69b4;
+    animation: confettiFall 3s linear forwards;
+    transform: translateZ(0); /* GPU acceleration */
+}
+
+@keyframes confettiFall {
+    0% {
+        transform: translateY(-100px) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.celebration-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.95);
+    padding: 50px;
+    border-radius: 25px;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.2);
+    text-align: center;
+    z-index: 1001;
+    display: none;
+}
+
+.celebration-message h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 5rem;
+    color: #8b0045;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(to right, #8b0045, #ff1493);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.celebration-message p {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3.5rem;
+    color: #d63384;
+}
+
+/* Music Controls */
+.music-control {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    font-size: 2rem;
+    color: #ff69b4;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    z-index: 100;
+    transition: all 0.3s ease;
+    transform: translateZ(0); /* GPU acceleration */
+}
+
+.music-control:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+/* Stars Background */
+.stars {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.star {
+    position: absolute;
+    color: #ffd700;
+    animation: twinkle 2s ease-in-out infinite alternate;
+    transform: translateZ(0); /* GPU acceleration */
+}
+
+@keyframes twinkle {
+    0% { opacity: 0.3; transform: scale(0.8); }
+    100% { opacity: 1; transform: scale(1.2); }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .hero-content h1 {
+        font-size: 5rem;
+    }
+    
+    h2 {
+        font-size: 4.5rem;
+    }
+    
+    .typewriter {
+        font-size: 3rem;
+    }
+    
+    .love-letter p {
+        font-size: 2.5rem;
+    }
+    
+    .proposal-btn {
+        font-size: 2.5rem;
+        padding: 25px 60px;
+    }
+    
+    .celebration-message h3 {
+        font-size: 4rem;
+    }
+    
+    .celebration-message p {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 4rem;
+    }
+    
+    h2 {
+        font-size: 3.5rem;
+    }
+    
+    .typewriter {
+        font-size: 2.5rem;
+        min-height: 100px;
+    }
+    
+    .continue-btn {
+        font-size: 1.8rem;
+        padding: 20px 50px;
+    }
+    
+    .photo-caption {
+        font-size: 1.8rem;
+    }
+    
+    .love-letter {
+        padding: 30px;
+        margin: 3rem 20px; /* Added side margin for mobile */
+    }
+    
+    .love-letter p {
+        font-size: 2rem;
+    }
+    
+    .proposal-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        padding: 0 20px; /* Added side padding */
+    }
+    
+    .proposal-btn {
+        font-size: 2.2rem;
+        padding: 20px 50px;
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .celebration-message {
+        padding: 30px;
+        width: 90%;
+        margin: 0 auto;
+    }
+    
+    .celebration-message h3 {
+        font-size: 3.2rem;
+    }
+    
+    .celebration-message p {
+        font-size: 2.5rem;
+    }
+    
+    .gallery {
+        grid-template-columns: 1fr;
+        padding: 0 20px; /* Added side padding */
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 3.2rem;
+    }
+    
+    h2 {
+        font-size: 2.8rem;
+    }
+    
+    .typewriter {
+        font-size: 2rem;
+        min-height: 90px;
+    }
+    
+    .continue-btn {
+        font-size: 1.5rem;
+        padding: 18px 40px;
+    }
+    
+    .photo-placeholder {
+        height: 220px;
+        font-size: 5rem;
+    }
+    
+    .photo-caption {
+        font-size: 1.6rem;
+    }
+    
+    .love-letter {
+        padding: 20px;
+        margin: 2rem 15px; /* Added side margin for small mobile */
+    }
+    
+    .love-letter p {
+        font-size: 1.8rem;
+    }
+    
+    .proposal-btn {
+        font-size: 1.8rem;
+        padding: 18px 45px;
+    }
+    
+    .celebration-message h3 {
+        font-size: 2.8rem;
+    }
+    
+    .celebration-message p {
+        font-size: 2.2rem;
+    }
+    
+    .gallery {
+        padding: 0 15px; /* Added side padding */
+    }
+}
+
+/* Smooth scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Hide sections initially */
+.hidden-section {
+    display: none;
+    opacity: 0;
+}
+
+/* Fade-in when shown */
+@keyframes fadeInSection {
+    from { 
+        opacity: 0; 
+        transform: translateY(20px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+.show-section {
+    display: flex !important;
+    animation: fadeInSection 0.8s ease both;
+}
+
+/* New text animations */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.pulse-text {
+    animation: pulse 2s infinite;
+}
+
+.big-question {
+    font-family: 'Playfair Display', serif;
+    font-size: 7rem;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+    margin: 3rem 0;
+    background: linear-gradient(to right, #ffffff, #ffd700);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+.special-moment {
+    font-family: 'Dancing Script', cursive;
+    font-size: 4rem;
+    color: #8b0045;
+    margin: 2rem 0;
+    text-align: center;
+}
+
+/* Fix for gallery spacing */
+.gallery-container {
+    width: 100%;
+    padding: 0 20px; /* Added side padding */
+}
+
+/* Make all sections full height and center content */
+section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 40px 20px; /* Added side padding */
+}
+
+/* Fix container to not break centering */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 20px; /* Added side padding */
+    width: 100%;
+}
+
+/* Hero content */
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px; /* Added side padding */
+}
+
+/* Buttons centered */
+.continue-btn,
+.proposal-buttons {
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.photo-placeholder {
+    width: 290px;
+    height: 360px;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.photo-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    transition: transform 0.4s ease;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    justify-items: center;
+    margin-top: 50px;
+    width: 100%;
+    padding: 0 20px; /* Added side padding */
+}
+
+.photo-card {
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    width: 100%;
+    max-width: 320px;
+}
+
+.photo-card:hover {
+    transform: scale(1.08);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+    z-index: 5;
+}
+
+.photo-placeholder {
+    width: 100%;
+    height: 250px;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+}
+
+.photo-card:hover .photo-placeholder img {
+    transform: scale(1.15);
+}
+
+
+
+.music-section {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.music-card {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  padding: 15px 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  margin-top: 15px;
+}
+
+.music-card input {
+  margin-bottom: 10px;
+}
+
+.music-card audio {
+  width: 250px;
+  outline: none;
+}
+
+
+
+.music-section {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.music-card {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  padding: 15px 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  margin-top: 15px;
+}
+
+.music-card audio {
+  width: 250px;
+  outline: none;
+  margin-bottom: 10px;
+}
+
+.playlist div {
+  cursor: pointer;
+  padding: 6px 10px;
+  border-radius: 8px;
+  margin: 4px 0;
+  background: rgba(255,255,255,0.15);
+  transition: background 0.3s;
+}
+
+.playlist div:hover {
+  background: rgba(255,255,255,0.3);
+}
+
+
+
+
+/* Music Section Styling */
+.music-section {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+  border-radius: 20px;
+  margin: 40px auto;
+  max-width: 900px;
+  box-shadow: 0px 8px 20px rgba(0,0,0,0.15);
+}
+
+.music-section h2 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.music-section .special-moment {
+  color: #fff;
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.music-card {
+  display: grid;
+  gap: 25px;
+  justify-items: center;
+}
+
+/* Individual audio blocks */
+.music-card audio {
+  width: 80%;
+  max-width: 500px;
+  border-radius: 12px;
+  outline: none;
+  background: #fff;
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.music-card audio:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 8px 20px rgba(0,0,0,0.3);
+}
+
+.music-card p {
+  margin-top: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0px 1px 3px rgba(0,0,0,0.4);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .music-card audio {
+    width: 95%;
+  }
+}
+
+
+
+
